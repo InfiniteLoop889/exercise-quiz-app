@@ -2,7 +2,7 @@ body {
   background-color: #183ce8 !important;
 }
 
-.wrapper {
+#wrapper {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -14,10 +14,23 @@ body {
 }
 
 .question-card > img {
-  height: 20rem;
+  height: 18rem;
   object-fit: cover;
 }
 
+.answer {
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.answer:hover {
+  background-color: #f0f0f0;
+  border-color: #183ce8;
+}
 .question-footer {
   display: flex;
   justify-content: space-between;

@@ -1,0 +1,42 @@
+let questions = [
+  {
+    question: "What does the HTML element &lt;a&gt;&lt;/a&gt; do?",
+    answer_1: "Displays an image",
+    answer_2: "Creates a list",
+    answer_3: "Creates a hyperlink",
+    answer_4: "Formats text as bold",
+    right_answer: 3,
+  },
+  {
+    question: "Which CSS property changes the text color?",
+    answer_1: "background-color",
+    answer_2: "color",
+    answer_3: "font-style",
+    answer_4: "text-align",
+    right_answer: 2,
+  },
+  {
+    question: "How do you define a variable in JavaScript?",
+    answer_1: "var myVariable = 10;",
+    answer_2: "let myVariable == 10;",
+    answer_3: "const: myVariable = 10;",
+    answer_4: "define myVariable = 10;",
+    right_answer: 1,
+  },
+  {
+    question: "What does CSS stand for?",
+    answer_1: "Creative Style Sheets",
+    answer_2: "Cascading Style Sheets",
+    answer_3: "Computer Styled Syntax",
+    answer_4: "Colorful Style Structure",
+    right_answer: 2,
+  },
+  {
+    question: "Which file typically contains JavaScript code?",
+    answer_1: "index.js",
+    answer_2: "styles.css",
+    answer_3: "main.html",
+    answer_4: "image.png",
+    right_answer: 1,
+  },
+];
