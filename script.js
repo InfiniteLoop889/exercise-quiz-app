@@ -1,0 +1,42 @@
+let questions = [
+  {
+    question: "Was bewirkt das HTML-Element <a>?",
+    answer_1: "Es zeigt ein Bild an",
+    answer_2: "Es erzeugt eine Liste",
+    answer_3: "Es erstellt einen Hyperlink",
+    answer_4: "Es formatiert Text fett",
+    right_answer: 3,
+  },
+  {
+    question: "Welche Eigenschaft in CSS ändert die Textfarbe?",
+    answer_1: "background-color",
+    answer_2: "color",
+    answer_3: "font-style",
+    answer_4: "text-align",
+    right_answer: 2,
+  },
+  {
+    question: "Wie kann man in JavaScript eine Variable definieren?",
+    answer_1: "var meineVariable = 10;",
+    answer_2: "let meineVariable == 10;",
+    answer_3: "const: meineVariable = 10;",
+    answer_4: "define meineVariable = 10;",
+    right_answer: 1,
+  },
+  {
+    question: "Wofür steht CSS?",
+    answer_1: "Creative Style Sheets",
+    answer_2: "Cascading Style Sheets",
+    answer_3: "Computer Styled Syntax",
+    answer_4: "Colorful Style Structure",
+    right_answer: 2,
+  },
+  {
+    question: "Welche Datei enthält typischerweise JavaScript-Code?",
+    answer_1: "index.js",
+    answer_2: "styles.css",
+    answer_3: "main.html",
+    answer_4: "image.png",
+    right_answer: 1,
+  },
+];

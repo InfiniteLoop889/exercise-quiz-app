@@ -1,0 +1,25 @@
+body {
+  background-color: #183ce8 !important;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-card {
+  width: 30rem;
+}
+
+.question-card > img {
+  height: 20rem;
+  object-fit: cover;
+}
+
+.question-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
