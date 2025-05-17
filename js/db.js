@@ -5,7 +5,7 @@ let questions = [
     answer_2: "Creates a list",
     answer_3: "Creates a hyperlink",
     answer_4: "Formats text as bold",
-    right_answer: 3,
+    correct_answer: 3,
   },
   {
     question: "Which CSS property changes the text color?",
@@ -13,7 +13,7 @@ let questions = [
     answer_2: "color",
     answer_3: "font-style",
     answer_4: "text-align",
-    right_answer: 2,
+    correct_answer: 2,
   },
   {
     question: "How do you define a variable in JavaScript?",
@@ -21,7 +21,7 @@ let questions = [
     answer_2: "let myVariable == 10;",
     answer_3: "const: myVariable = 10;",
     answer_4: "define myVariable = 10;",
-    right_answer: 1,
+    correct_answer: 1,
   },
   {
     question: "What does CSS stand for?",
@@ -29,7 +29,7 @@ let questions = [
     answer_2: "Cascading Style Sheets",
     answer_3: "Computer Styled Syntax",
     answer_4: "Colorful Style Structure",
-    right_answer: 2,
+    correct_answer: 2,
   },
   {
     question: "Which file typically contains JavaScript code?",
@@ -37,6 +37,6 @@ let questions = [
     answer_2: "styles.css",
     answer_3: "main.html",
     answer_4: "image.png",
-    right_answer: 1,
+    correct_answer: 1,
   },
 ];
