@@ -1,52 +1,55 @@
 const wrapperRef = document.getElementById("wrapper");
-const allQuestions = questions.length;
-let currentQuestion = 0;
-let selectedAnswer = null;
 
-function init() {
-  wrapperRef.innerHTML = createQuestionCard(currentQuestion, allQuestions);
-  addEventListeners();
+// Object for global variables
+const quizState = {
+  currentQuestion: 0,
+  selectedAnswer: null,
+  allQuestions: questions.length,
+};
+
+function init(state) {
+  wrapperRef.innerHTML = createQuestionCard(state.currentQuestion, state.allQuestions);
+  addEventListeners(state);
 }
 
-function addEventListeners() {
+function addEventListeners(state) {
   // Eventlisteners for the answers
   document.querySelectorAll(".answer").forEach((answer) => {
     answer.addEventListener("click", function () {
       let answerNumber = parseInt(answer.getAttribute("data-answer"));
-      selectAnswer(answerNumber);
+      selectAnswer(state, answerNumber);
     });
   });
-  // Eventlistener for the "next quesition" button
-  document.getElementById("next-question").addEventListener("click", () => checkAnswer(selectedAnswer, currentQuestion));
+  // Eventlistener for the "Next quesition" button
+  document.getElementById("next-question").addEventListener("click", () => checkAnswer(state));
 }
 
-function selectAnswer(answerNumber) {
-  selectedAnswer = answerNumber;
+function selectAnswer(state, answerNumber) {
+  state.selectedAnswer = answerNumber;
   document.querySelectorAll(".answer").forEach((answer) => answer.classList.remove("selected-answer", "correct-answer", "wrong-answer"));
   document.querySelector(`.answer[data-answer="${answerNumber}"]`).classList.add("selected-answer");
 }
 
-function checkAnswer(selectedAnswer, currentQuestion) {
-  console.log(currentQuestion);
-  console.log(selectedAnswer);
-  if (selectedAnswer === null) {
+function checkAnswer(state) {
+  if (state.selectedAnswer === null) {
     return;
   } else {
-    const correctAnswer = questions[currentQuestion].correct_answer;
-    if (selectedAnswer === correctAnswer) {
+    const correctAnswer = questions[state.currentQuestion].correct_answer;
+    if (state.selectedAnswer === correctAnswer) {
       document.querySelector(`.answer[data-answer="${correctAnswer}"]`).classList.add("correct-answer");
 
       setTimeout(() => {
-        currentQuestion++;
-        wrapperRef.innerHTML = createQuestionCard(currentQuestion, allQuestions);
-        addEventListeners();
+        state.currentQuestion++;
+        state.selectedAnswer = null;
+        wrapperRef.innerHTML = createQuestionCard(state.currentQuestion, state.allQuestions);
+        addEventListeners(state);
       }, 1500);
     } else {
-      document.querySelector(`.answer[data-answer="${selectedAnswer}"]`).classList.add("wrong-answer");
+      document.querySelector(`.answer[data-answer="${state.selectedAnswer}"]`).classList.add("wrong-answer");
     }
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  init();
+  init(quizState);
 });
