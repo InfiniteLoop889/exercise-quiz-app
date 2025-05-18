@@ -13,6 +13,10 @@ body {
 /* Question card */
 /* --------------------------------------------------------------------- */
 
+.card {
+  border: 0 !important;
+}
+
 .question-card {
   width: 30rem;
 }
@@ -61,4 +65,25 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* --------------------------------------------------------------------- */
+/* End screen */
+/* --------------------------------------------------------------------- */
+
+.end-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.end-card > img {
+  max-width: 400px;
+  border-top-left-radius: var(--bs-card-border-radius);
+  border-top-right-radius: var(--bs-card-border-radius);
+}
+
+.restart-btn {
+  width: 50%;
+  margin-bottom: 20px;
 }
