@@ -9,6 +9,7 @@ const quizState = {
 };
 
 function init(state) {
+  // creates the first question card
   wrapperRef.innerHTML = createQuestionCard(state.currentQuestion, state.allQuestions);
   addEventListeners(state);
 }
@@ -27,7 +28,9 @@ function addEventListeners(state) {
 
 function selectAnswer(state, answerNumber) {
   state.selectedAnswer = answerNumber;
+  // removes the selected-answer class from the previous selected answer
   document.querySelectorAll(".answer").forEach((answer) => answer.classList.remove("selected-answer"));
+  // adds the selected-answer class to the just (currently) selected
   document.querySelector(`.answer[data-answer="${answerNumber}"]`).classList.add("selected-answer");
 }
 
